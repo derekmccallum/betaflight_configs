@@ -14,38 +14,68 @@ Config files are raw Betaflight CLI output (`dump all` or `diff all`). Accompany
 
 ---
 
-## OSD Setup
+## OSD & Modes — CLI Setup
 
-Common elements active across both whoop and 7" builds:
+Paste these commands into the Betaflight Configurator CLI tab.
 
-- **Battery voltage** — top-right area
-- **Throttle position** — top-right area
-- **Flight mode** — top area
-- **Power (watts)** — upper area
-- **Core temperature** — upper area
-- **Crosshairs** — center
-- **Artificial horizon sidebar**
-- **Up/down reference**
-- **DISARMED** — lower area
-- **Warnings** — lower center
-- **Ready mode** indicator
-- **Camera frame** (24x11)
+### Common (all builds)
 
-Chimera 7 additionally shows **GPS sats**, **home direction/distance**, **flight distance**, **ESC temperature**, and **altitude** — GPS-dependent elements appropriate for a long-range build.
+```
+# Modes
+aux 0 0 0 900 1200 0 0    # ARM on AUX1 (CH5, low)
+aux 1 1 1 1300 1700 0 0   # ANGLE on AUX2 (CH6, mid)
+aux 2 2 1 1700 2100 0 0   # HORIZON on AUX2 (CH6, high)
+aux 3 13 2 1300 2100 0 0  # BEEPER on AUX3 (CH7, mid+)
 
-Units: METRIC. Warnings: standard arming/ in-flight alerts enabled. Logo on arming: OFF. Canvas: 53×20 (Chimera 7) / default (Mobula8). Frame rate: 12 Hz. Background: transparent.
+# OSD — general
+set osd_units = METRIC
+set osd_warn_bitmask = 286719
+set osd_rssi_alarm = 20
+set osd_link_quality_alarm = 80
+set osd_rssi_dbm_alarm = -60
+set osd_rsnr_alarm = 4
+set osd_cap_alarm = 2200
+set osd_alt_alarm = 100
+set osd_core_temp_alarm = 70
+set osd_ah_max_pit = 20
+set osd_ah_max_rol = 40
+set osd_ah_invert = OFF
+set osd_logo_on_arming = OFF
+set osd_framerate_hz = 12
+set osd_menu_background = TRANSPARENT
 
----
+# OSD — element positions (whoop layout)
+set osd_vbat_pos = 2344
+set osd_throttle_pos = 2472
+set osd_flymode_pos = 3368
+set osd_crosshairs_pos = 2361
+set osd_ah_sbar_pos = 313
+set osd_disarmed_pos = 2614
+set osd_ready_mode_pos = 1347
+set osd_warnings_pos = 14932
+set osd_core_temp_pos = 2376
+set osd_camera_frame_pos = 142
+set osd_up_down_reference_pos = 312
+```
 
-## Modes Setup
+### Chimera 7 additions (GPS long-range)
 
-Consistent across all builds:
+```
+set osd_gps_sats_pos = 3144
+set osd_home_dir_pos = 2586
+set osd_home_dist_pos = 2132
+set osd_flight_dist_pos = 2141
+set osd_esc_tmp_pos = 2408
+set osd_altitude_pos = 18548
+set osd_power_pos = 2344
+set osd_canvas_width = 53
+set osd_canvas_height = 20
+```
 
-| Switch | Channel | Mode | Range |
-|---|---|---|---|
-| AUX1 | CH5 | ARM | 900–1200 |
-| AUX2 (mid) | CH6 | ANGLE | 1300–1700 |
-| AUX2 (high) | CH6 | HORIZON | 1700–2100 |
-| AUX3 | CH7 | BEEPER | 1300–2100 |
+### Mobula8 additions (whoop)
 
-Mobula8 also assigns **OSD disable switch** on AUX4 (CH8, 1300–2100) for clean DVR footage.
+```
+aux 4 19 3 1300 2100 0 0  # OSD DISABLE SWITCH on AUX4 (CH8, mid+)
+```
+
+Position values are Betaflight's coordinate encoding (`row * 100 + col`). 341 = hidden (default). Adjust positions in the OSD tab to your preference — these are starting layouts, not a pixel-perfect overlay.
