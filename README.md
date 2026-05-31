@@ -26,6 +26,7 @@ aux 0 0 0 900 1200 0 0    # ARM on AUX1 (CH5, low)
 aux 1 1 1 1300 1700 0 0   # ANGLE on AUX2 (CH6, mid)
 aux 2 2 1 1700 2100 0 0   # HORIZON on AUX2 (CH6, high)
 aux 3 13 2 1300 2100 0 0  # BEEPER on AUX3 (CH7, mid+)
+aux 4 19 3 1300 2100 0 0  # OSD DISABLE SWITCH on AUX4 (CH8, mid+)
 
 # OSD — general
 set osd_units = METRIC
@@ -70,12 +71,6 @@ set osd_altitude_pos = 18548
 set osd_power_pos = 2344
 set osd_canvas_width = 53
 set osd_canvas_height = 20
-```
-
-### Mobula8 additions (whoop)
-
-```
-aux 4 19 3 1300 2100 0 0  # OSD DISABLE SWITCH on AUX4 (CH8, mid+)
 ```
 
 Position values are Betaflight's coordinate encoding (`row * 100 + col`). 341 = hidden (default). Adjust positions in the OSD tab to your preference — these are starting layouts, not a pixel-perfect overlay.
