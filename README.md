@@ -27,7 +27,7 @@ This is the **HD** version (CrazyF405HD board with no analog OSD). The FC runs B
 | **Motors** | Happymodel EX1103 11000KV (9N12P, 1.5mm shaft, 3.8g) |
 | **Props** | Gemfan Hurricane 2023 tri-blade (2.3" pitch, PC) |
 | **Battery** | 2S LiPo/LiHV 450-530mAh (XT30) |
-| **Camera** | HD digital — configured for Walksnake/HDZero/DJI O3 |
+| **Camera** | DJI O4 Lite |
 | **Mount** | 25.5x25.5mm (whoop pattern) |
 
 ---
