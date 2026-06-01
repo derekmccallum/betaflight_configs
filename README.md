@@ -14,6 +14,24 @@ Config files are raw Betaflight CLI output (`dump all` or `diff all`). Accompany
 
 ---
 
+## Mobula8 — Components
+
+This is the **HD** version (CrazyF405HD board with no analog OSD). The FC runs Betaflight 2025.12.2 on target `CRAZYBEEF405`.
+
+| Component | Detail |
+|---|---|
+| **Frame** | Mobula8 85mm whoop frame (1.5mm CF / plastic ducts) |
+| **FC** | CrazyF405HD ELRS AIO — STM32F405RGT6, BMI270 (SPI), BMP280 baro, 8MB blackbox |
+| **ESC** | 4-in-1 12A (15A peak) BLHeli\_S / Bluejay, DSHOT600 |
+| **RX** | Built-in UART ExpressLRS 2.4GHz (ELRS V3.0, CRSF) |
+| **Motors** | Happymodel EX1103 11000KV (9N12P, 1.5mm shaft, 3.8g) |
+| **Props** | Gemfan Hurricane 2023 tri-blade (2.3" pitch, PC) |
+| **Battery** | 2S LiPo/LiHV 450-530mAh (XT30) |
+| **Camera** | HD digital — configured for Walksnake/HDZero/DJI O3 |
+| **Mount** | 25.5x25.5mm (whoop pattern) |
+
+---
+
 ## OSD & Modes — CLI Setup
 
 Paste these commands into the Betaflight Configurator CLI tab.
