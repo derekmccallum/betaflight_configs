@@ -21,7 +21,7 @@ This is the **HD** version (CrazyF405HD board with no analog OSD). The FC runs B
 | Component | Detail |
 |---|---|
 | **Frame** | Mobula8 85mm whoop frame (1.5mm CF / plastic ducts) |
-| **FC** | CrazyF405HD ELRS AIO — STM32F405RGT6, BMI270 (SPI), BMP280 baro, 8MB blackbox |
+| **FC** | CrazyF405HD ELRS AIO — STM32F405RGT6, BMI270 (SPI), BMP280 baro, 8MB blackbox https://www.happymodel.cn/index.php/2023/05/26/crazyf405hd-elrs-1-2s-aio-fc-built-in-uart-elrs-receiver-and-12a-blheli_s-esc/|
 | **ESC** | 4-in-1 12A (15A peak) BLHeli\_S / Bluejay, DSHOT600 |
 | **RX** | Built-in UART ExpressLRS 2.4GHz (ELRS V3.0, CRSF) |
 | **Motors** | Happymodel EX1103 11000KV (9N12P, 1.5mm shaft, 3.8g) |
