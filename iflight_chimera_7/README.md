@@ -163,12 +163,10 @@ Arming is blocked while USB is connected (`MSP` flag). Test arming on battery on
 - [ ] **Move VTX off R7 (5880 MHz)**: it's just outside the UK licence-free 5725–5875 MHz band.
       R3–R6 (5732–5843 MHz) are inside it
 - [ ] AUX5 mid/high selects 200/500 mW: above the 25 mW licence-free limit
-- [ ] Confirm OSD DISABLE on AUX4 is intended
 - [ ] Set `motor_kv` to the Xing 2809 KV (still the 1960 default)
 - [ ] Check `failsafe_procedure` and `dshot_bidir` defaults on 2026.6.2
 - [ ] Enable bidirectional DShot (needs ESC support) so the RPM filter works
 - [ ] Decide on failsafe: `DROP` vs `GPS_RESCUE` (test rescue in a safe area first)
-- [ ] Decide whether airmode should stay off
 - [ ] Set `bat_capacity` and check cell-voltage warnings for the pack in use
 - [ ] Fill in the remaining TODOs
 
