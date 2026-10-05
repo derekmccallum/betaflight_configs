@@ -18,7 +18,6 @@ mcu_id 0040004f3333510a36393332
 signature 
 
 # feature
-feature -AIRMODE
 feature GPS
 feature TELEMETRY
 feature OSD
