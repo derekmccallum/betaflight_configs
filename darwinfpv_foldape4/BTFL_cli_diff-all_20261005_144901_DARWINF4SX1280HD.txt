@@ -1,0 +1,85 @@
+diff all
+
+# version
+# Betaflight / STM32F411 (F411) 2026.6.2 Sep 28 2026 / 15:55:02 (e0b7bb01b) MSP API: 1.48
+# config rev: 3a406c5
+
+# start the command batch
+batch start
+
+# reset configuration to default settings
+defaults nosave
+
+board_name DARWINF4SX1280HD
+manufacturer_id DAFP
+mcu_id 004800545041500b20323141
+signature 
+
+# feature
+feature GPS
+feature TELEMETRY
+feature OSD
+
+# serial
+serial UART1 131073 115200 57600 0 115200
+serial UART2 2 115200 115200 0 115200
+
+# aux
+aux 0 0 0 1300 2100 0 0
+aux 1 1 1 900 1300 0 0
+aux 2 2 1 1300 1700 0 0
+
+# master
+set acc_calibration = -17,-57,120,1
+set gps_auto_config = OFF
+set pid_process_denom = 2
+set osd_vbat_pos = 14758
+set osd_link_quality_pos = 15848
+set osd_flymode_pos = 15625
+set osd_throttle_pos = 14823
+set osd_ah_pos = 14522
+set osd_current_pos = 14726
+set osd_mah_drawn_pos = 14695
+set osd_gps_sats_pos = 15529
+set osd_home_dir_pos = 14714
+set osd_home_dist_pos = 15721
+set osd_flight_dist_pos = 15689
+set osd_warnings_pos = 14836
+set osd_disarmed_pos = 14807
+set osd_core_temp_pos = 14630
+set expresslrs_uid = 88,19,143,157,143,139
+
+profile 0
+
+profile 1
+
+profile 2
+
+profile 3
+
+# restore original profile selection
+profile 0
+
+rateprofile 0
+
+rateprofile 1
+
+rateprofile 2
+
+rateprofile 3
+
+battery_profile 0
+
+battery_profile 1
+
+battery_profile 2
+
+# restore original rateprofile selection
+rateprofile 2
+
+# restore original battery_profile selection
+battery_profile 0
+
+# save configuration
+save
+# 
