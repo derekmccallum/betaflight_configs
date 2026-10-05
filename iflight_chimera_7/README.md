@@ -8,7 +8,7 @@ Long-range 7" quad, converted from DJI O4 Pro digital back to analog video (Oct 
 
 | Item | Value |
 |---|---|
-| Firmware | Betaflight **2026.6.2** (built 4 Oct 2026, MSP API 1.48) |
+| Firmware | Betaflight **2026.6.2** (built 4 Oct 2026, MSP API 1.48)<br>ExpressLRS v3.6.4 |
 | Build key | `7ddc3fb74d75cce483e672c6a7e4bf41` |
 | Target | `SPEEDYBEEF7V3` (manufacturer `SPBE`) |
 | MCU | STM32F722, 216 MHz (no overclock) |
@@ -43,7 +43,7 @@ missing an option fails **silently**, so re-flash with all of these:
 | GPS | u-blox M10, UART6 @ 57600 |
 | OSD | Onboard analog OSD chip, 30 × 16 grid, PAL |
 | Blackbox | SD card (~480 MB) |
-| Receiver | CRSF protocol, 250 Hz packet rate — TODO: receiver model, ELRS version |
+| Receiver | CRSF protocol, 250 Hz packet rate — RadioMaster RP4TD True Diversity 2.4GHz RX (ESP32 target) |
 | VTX | RushFPV Tank Ultimate Mini 48ch v1 — 25 / 200 / 500 / 800 mW, SmartAudio |
 | Camera | Run Cam Phoenix (J Bardwell edition) |
 | Battery | S6 (`bat_capacity` is unset) |
@@ -81,6 +81,19 @@ A camera wired straight to the VTX gives a clean picture with **no OSD**.
 | Power switch | AUX5: low = 25 mW, mid = 200 mW, high = 500 mW (band/channel unchanged) |
 
 UK licence-free 5.8 GHz: **25 mW, 5725–5875 MHz** only. Higher power needs an amateur licence.
+
+## Receiver / ExpressLRS
+
+| Setting | Value |
+|---|---|
+| Flashing | ExpressLRS Configurator |
+| Target Category |RadioMaster 2.4 GHz |
+| Device Target | RadioMaster RP4TD True Diversity 2.4GHz RX (ESP32 target) |
+| Version | 3.6.4 |
+| Binding Phrase | elrs1234 |
+| Flashing Method | Betaflight Passthrough |
+| Connection Protocol | Serial UART (CRSF) |
+| Comment | Can't go to v4 yet owing to lack of support in another drone (Dawin FoldApe 4") |
 
 ## Key settings
 
