@@ -100,7 +100,6 @@ UK licence-free 5.8 GHz: **25 mW, 5725–5875 MHz** only. Higher power needs an 
 | Area | Setting |
 |---|---|
 | OSD | Analog OSD chip, `vcd_video_system = PAL` |
-| Airmode | **Off** (`feature -AIRMODE`) |
 | Motors | DShot600 — TODO: check `get dshot_bidir` (RPM filter needs it on) |
 | Rates | Actual: 70°/s centre, 670°/s max, no expo (2026.6.2 defaults) |
 | Throttle curve | `thr_mid = 25`, `thr_expo = 70` |
